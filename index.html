@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductionKEY - Personal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PRAY , BELIEVE & WORK .</h1>
+            <div class="date-display" id="currentDate"></div>
+        </header>
+
+        <main class="dashboard">
+            <!-- Pomodoro Timer Section -->
+            <section class="timer-section">
+                <h2>Focus Timer</h2>
+                <div class="timer-container">
+                    <div class="timer-display" id="timerDisplay">59:00</div>
+                    <div class="timer-controls">
+                        <button id="startTimer" class="btn btn-primary">Start</button>
+                        <button id="pauseTimer" class="btn btn-secondary" disabled>Pause</button>
+                        <button id="resetTimer" class="btn btn-secondary">Reset</button>
+                    </div>
+                    <div class="timer-sessions">
+                        <span>Sessions Completed: <span id="sessionCount">0</span></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- weekly compass -->
+            <section class="card">
+    <h1 class="card-title">Weekly Timetable</h1>
+
+    <div class="table-container">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Morning<br><span>(6 AM - 12 PM)</span></th>
+            <th>Afternoon<br><span>(12 PM - 6 PM)</span></th>
+            <th>Evening<br><span>(6 PM - 10 PM)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Monday </b></td>
+            <td>Python</td>
+            <td>Excel</td>
+            <td>Chinese</td>
+          </tr>
+          <tr>
+            <td><b>Tuesday </b></td>
+            <td>JavaScript</td>
+            <td>Python</td>
+            <td>Excel</td>
+          </tr>
+          <tr>
+            <td><b>Wednesday</b></td>
+            <td>Python</td>
+            <td>API</td>
+            <td>Chinese</td>
+          </tr>
+          <tr>
+            <td><b>Thursday</b></td>
+            <td>JavaScript</td>
+            <td>ArchiCAD</td>
+            <td>Python</td>
+            
+          </tr>
+          <tr>
+            <td><b>Friday</b></td>
+            <td>Python</td>
+            <td>Excel</td>
+            <td>Other</td>
+          </tr>
+          <tr>
+            <td><b>Saturday</b></td>
+            <td>JavaScript</td>
+            <td>ArchiCAD</td>
+            <td>APIs</td>
+          </tr>
+          <tr>
+            <td><b>Sunday</b></td>
+            <td>Python</td>
+            <td>Excel</td>
+            <td>Chinese</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section> 
+        
+        
+
+            
+            <!-- Task Manager Section -->
+            <section class="tasks-section">
+                <h2>Task Manager</h2>
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="addTask" class="btn btn-primary">Add</button>
+                </div>
+                <ul class="task-list" id="taskList"></ul>
+            </section>
+
+
+            <!-- Habit Tracker Section -->
+            <section class="habits-section">
+                <h2>Habit Tracker</h2>
+                <div class="habit-input">
+                    <input type="text" id="habitInput" placeholder="Add a new habit...">
+                    <button id="addHabit" class="btn btn-primary">Add</button>
+                </div>
+                <div class="habits-grid" id="habitsGrid"></div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section class="analytics-section">
+                <h2>Progress Analytics</h2>
+                <div class="charts">
+                    <canvas id="productivityChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>s
